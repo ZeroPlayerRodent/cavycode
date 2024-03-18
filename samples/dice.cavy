@@ -1,0 +1,39 @@
+Wheek-string "How many sides for the dice?: "
+Eat-lettuce Beg-int
+
+Wheek-string "How many dice will be rolled?: "
+Eat-pellet Beg-int
+Poop
+
+Mark-territory 1
+Forage-food Bowl
+Groom-self
+Eat-hay 1
+Groom-self
+Chatter 1
+Popcorn-if 0
+  Zoomies-to 1
+Poop
+
+Wheek-char 10
+Wheek-string "Rolls:"
+Wheek-loud
+
+Eat-pellet -1
+
+Mark-territory 2
+Eat-lettuce Tunnel
+Poop
+Popcorn-if -1
+  Eat-hay Bowl
+Popcorn-if -1
+  Zoomies-to 2
+
+Eat-pellet Bowl
+Poop
+
+Wheek-char 10
+Wheek-char 10
+
+Wheek-string "Total value (every roll added up):"
+Wheek-loud
