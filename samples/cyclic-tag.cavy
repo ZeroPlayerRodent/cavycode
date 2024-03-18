@@ -1,0 +1,92 @@
+|
+
+~ CYCLIC TAG SYSTEM INTERPRETER IN CAVYCODE ~
+
+~ Created by ZeroPlayerRodent 2024 ~
+
+Production syntax:
+
+"0" -> 0
+"1" -> 1
+";" -> End of production
+
+|
+
+New-tunnel
+Burrow-in 1
+
+Wheek-string "Enter the productions:"
+Wheek-char 10
+Mark-territory 1
+Groom-self
+Eat-pellet Beg-char
+Groom-self
+Popcorn-if 10
+  Zoomies-to 1
+
+Groom-self
+
+Burrow-in 0
+
+Wheek-string "Enter the initial data-string:"
+Wheek-char 10
+Mark-territory 2
+Groom-self
+Eat-pellet Beg-char
+Groom-self
+Popcorn-if 10
+  Zoomies-to 2
+
+Groom-self
+
+Mark-territory 3
+Popcorn-if 10
+  Eat-hay -48
+Popcorn-if 10
+  Eat-pellet Tunnel
+Popcorn-if 10
+  Poop
+Popcorn-if 10
+  Zoomies-to 3
+
+Poop
+
+Burrow-in 0
+Poop
+Wheek-loud
+
+Burrow-in 1
+Groom-self
+Poop
+Groom-self
+
+Mark-territory 4
+Burrow-in 1
+Popcorn-if 0
+  Eat-pellet Tunnel
+Poop
+Popcorn-not 49
+  Zoomies-to 100
+Popcorn-not 48
+  Zoomies-to 200
+Popcorn-not 59
+  Zoomies-to 300
+
+
+Mark-territory 100
+Burrow-in 0
+Popcorn-if 0
+  Eat-pellet 1
+Zoomies-to 4
+
+Mark-territory 200
+Burrow-in 0
+Popcorn-if 0
+  Eat-pellet 0
+Zoomies-to 4
+
+Mark-territory 300
+Burrow-in 0
+Poop
+Wheek-loud
+Zoomies-to 4
