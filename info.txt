@@ -1,0 +1,78 @@
+== DESCRIPTION ==
+
+CavyCode is a lightweight programming language with a Guinea Pig theme!
+Each function and keyword is based on a certain action or object related to Guinea Pigs.
+Think of CavyCode as a general-use programming language if it was designed by a Guinea Pig!
+CavyCode is both an interpreted and compiled language, with the ability to compile to Common Lisp.
+
+== DETAILS ==
+
+CavyCode uses a list of queues and an accumulator for memory.
+The queues and accumulator may hold any integer between negative infinity and positive infinity.
+The queues are unbounded and may hold an infinite number of integers.
+Every queue initializes with a single 0 enqueued.
+The "current queue" is the queue in the queue-list that can be operated on by functions.
+If the current queue is empty, the program will terminate.
+"Keywords" are shortcuts that may refer to spaces in memory or user input.
+CavyCode is case insensitive, so you can type functions or keywords with any capitalization.
+
+== USAGE ==
+
+Type './cavycode.mem' in the terminal to start CavyCode.
+Type '(cavy-i "filename.cavy")' to interpret a CavyCode program.
+Type '(cavy-c "filename.cavy")' to compile a CavyCode program to Lisp.
+Type '(exit)' to exit CavyCode.
+
+== KEYWORDS ==
+
+(BOWL) -> Value stored in the accumulator
+
+(TUNNEL) -> Value stored in leftmost element of current queue
+
+(BEG-INT) -> 1 line of user input as integer
+
+(BEG-CHAR) -> 1 byte of user input as ASCII code
+
+== FUNCTIONS ==
+
+["X" may be a keyword or integer, "Y" may be a string enclosed in double quotes.]
+
+(WHEEK-STRING Y) -> Output Y
+
+(WHEEK-INT X) -> Output X as integer
+
+(WHEEK-CHAR X) -> Output X as ASCII character
+
+(WHEEK-LOUD) -> Output current queue as list
+
+(WHEEK-LOUDER) -> Output queue-list
+
+(EAT-PELLET X) -> Enqueue X to current queue
+
+(EAT-HAY X) -> Add X to leftmost element of current queue
+
+(EAT-LETTUCE X) -> Set accumulator to value X
+
+(EAT-TOMATO X) -> Multiply leftmost element of current queue by X
+
+(POOP) -> Pop leftmost element of current queue
+
+(RUMBLE-STRUT X) -> Free queue at index X from memory, set current queue to index 0
+
+(CHATTER X) -> Subtract X from leftmost element of current queue
+
+(FORAGE-FOOD X) -> Enqueue random number between 0 and X to current queue
+
+(GROOM-SELF) -> Reverse current queue
+
+(NEW-TUNNEL) -> Append a new queue to the queue-list
+
+(BURROW-IN X) -> Set queue at index X to current queue
+
+(POPCORN-IF X) -> Skip next function if leftmost element in current queue is equal to X
+
+(POPCORN-NOT X) -> Skip next function if leftmost element in current queue is not equal to X
+
+(MARK-TERRITORY X) -> Create new label with ID of X
+
+(ZOOMIES-TO X) -> Goto label with ID of X
