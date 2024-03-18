@@ -1,0 +1,56 @@
+| This is some serious spaghetti code, but it works. |
+
+wheek-string "Collatz conjecture calculator"
+wheek-char 10
+
+wheek-string "Enter a positive integer: "
+eat-pellet beg-int
+
+poop
+
+popcorn-above 0
+  zoomies-to 666
+
+mark-territory 100
+
+eat-pellet tunnel
+eat-pellet tunnel
+
+chatter-loud 2
+eat-tomato 2 
+eat-lettuce tunnel
+poop
+chatter bowl
+
+popcorn-not 0
+  zoomies-to 2
+
+poop
+eat-tomato 3
+eat-hay 1
+wheek-int tunnel
+popcorn-if 1
+  zoomies-to 500
+zoomies-to 800
+
+mark-territory 2
+poop
+chatter-loud 2
+wheek-int tunnel
+popcorn-if 1
+  zoomies-to 500
+zoomies-to 800
+
+mark-territory 500
+wheek-char 10
+zoomies-to 100
+
+mark-territory 666
+wheek-string "That's not a positive integer..."
+zoomies-to 999
+
+mark-territory 800
+wheek-char 10
+wheek-string "Your number converged to 1!"
+
+mark-territory 999
