@@ -36,6 +36,12 @@ Popcorn-if 0
   Zoomies-to 1
 ```
 
+## Computational Class
+
+CavyCode is [Turing-Complete](https://en.wikipedia.org/wiki/Turing_completeness) due to its ability to simulate any arbitrary [Cyclic Tag System](https://en.wikipedia.org/wiki/Tag_system#Cyclic_tag_systems).
+
+Check out [cyclic-tag.cavy](https://github.com/ZeroPlayerRodent/cavycode/blob/main/samples/cyclic-tag.cavy) for a CavyCode program that interprets any cyclic tag system defined by the user.
+
 ## Get Started!
 
 You can build/run CavyCode directly from source, or you can download a pre-compiled binary from the releases tab.
