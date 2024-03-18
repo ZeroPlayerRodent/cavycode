@@ -15,6 +15,7 @@ The "current queue" is the queue in the queue-list that can be operated on by fu
 If the current queue is empty, the program will terminate.
 "Keywords" are shortcuts that may refer to spaces in memory or user input.
 CavyCode is case insensitive, so you can type functions or keywords with any capitalization.
+CavyCode ignores all whitespace, and you can enclose code comments in "|" symbols.
 
 == USAGE ==
 
