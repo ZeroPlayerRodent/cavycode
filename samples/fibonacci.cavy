@@ -1,0 +1,24 @@
+| Fibonacci number calculator in CavyCode |
+
+New-tunnel
+Burrow-in 1
+Wheek-string "How many Fibonacci numbers?: "
+Eat-pellet Beg-int
+Poop
+Burrow-in 0
+Eat-pellet 1
+Mark-territory 1
+Burrow-in 0
+Wheek-char 10
+Wheek-int Tunnel
+Eat-lettuce Tunnel
+Eat-pellet Tunnel
+Poop
+Eat-hay Bowl
+Burrow-in 1
+Chatter 1
+Popcorn-if 0
+  Zoomies-to 1
+Wheek-char 10
+Wheek-char 10
+Wheek-string "There are your Fibonacci numbers!"
