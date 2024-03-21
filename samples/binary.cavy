@@ -1,0 +1,44 @@
+wheek-string "Decimal to binary converter"
+wheek-char 10
+wheek-string "Enter an integer: "
+eat-pellet beg-int
+poop
+
+new-tunnel
+
+eat-pellet tunnel
+eat-pellet tunnel
+
+mark-territory 1
+chatter-loud 2
+eat-tomato 2 
+eat-lettuce tunnel
+poop
+chatter bowl
+  
+eat-lettuce tunnel
+burrow-in 1
+eat-pellet bowl
+burrow-in 0
+
+poop
+chatter-loud 2
+eat-pellet tunnel
+eat-pellet tunnel
+popcorn-if 0
+  zoomies-to 1
+
+burrow-in 1
+poop
+groom-self
+
+eat-pellet 2
+
+mark-territory 2
+wheek-int tunnel
+poop
+popcorn-if 2
+  zoomies-to 2
+
+wheek-char 10
+wheek-string "There is your binary number!"
