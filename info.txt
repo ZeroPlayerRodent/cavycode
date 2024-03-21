@@ -62,7 +62,7 @@ Type '(exit)' to exit CavyCode.
 
 (CHATTER X) -> Subtract X from leftmost element of current queue
 
-(CHATTER-LOUD X) -> Divide the leftmost element of current queue by X, and round to nearest integer
+(CHATTER-LOUD X) -> Divide the leftmost element of current queue by X, and truncate decimals
 
 (FORAGE-FOOD X) -> Enqueue random number between 0 and X to current queue
 
