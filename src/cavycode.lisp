@@ -87,7 +87,7 @@
             (push `(setf (elt (queue) 0) (- (elt (queue) 0) ,(is-symbol (elt foo (+ i 1))))) (cdr (last l))))
             
             ((string= "CHATTER-LOUD" (elt foo i))
-            (push `(setf (elt (queue) 0) (round (/ (elt (queue) 0) ,(is-symbol (elt foo (+ i 1)))))) (cdr (last l))))
+            (push `(setf (elt (queue) 0) (truncate (/ (elt (queue) 0) ,(is-symbol (elt foo (+ i 1)))))) (cdr (last l))))
             
             ((string= "FORAGE-FOOD" (elt foo i))
             (push `(nconc (queue) (list (random ,(is-symbol (elt foo (+ i 1))) (make-random-state t)))) (cdr (last l))))
