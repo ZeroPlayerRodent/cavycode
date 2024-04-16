@@ -1,0 +1,3 @@
+wheek-string "Enter a number: "
+eat-hay beg-float eat-carrot 0.5
+wheek-string "The square root of your number is: " wheek-float tunnel
