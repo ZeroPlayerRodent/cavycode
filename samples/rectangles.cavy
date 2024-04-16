@@ -1,0 +1,33 @@
+wheek-string "Welcome to the rectangle calculator!" wheek-char 10 wheek-char 10
+
+| Get width of rectangle |
+wheek-string "Enter the WIDTH of your rectangle: " eat-hay beg-float
+
+| Get length of rectangle |
+wheek-string "Enter the LENGTH of your rectangle: " eat-pellet beg-float
+
+| Find and output area of rectangle |
+eat-lettuce tunnel
+eat-pellet tunnel poop eat-pellet tunnel
+eat-tomato bowl
+wheek-char 10
+wheek-string "The AREA of your rectangle is: " wheek-float tunnel
+poop
+
+| Find and output perimeter of rectangle |
+eat-lettuce tunnel
+eat-pellet tunnel poop eat-pellet tunnel
+eat-hay bowl eat-tomato 2
+wheek-char 10
+wheek-string "The PERIMETER of your rectangle is: " wheek-float tunnel
+poop
+
+| Find and output diagonal of rectangle |
+eat-carrot 2
+eat-lettuce tunnel
+poop
+eat-carrot 2
+eat-hay bowl
+eat-carrot 0.5
+wheek-char 10
+wheek-string "The DIAGONAL of your rectangle is: " wheek-float tunnel
