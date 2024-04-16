@@ -8,14 +8,14 @@ CavyCode is both an interpreted and compiled language, with the ability to compi
 == DETAILS ==
 
 CavyCode uses a list of queues and an accumulator for memory.
-The queues and accumulator may hold any integer between negative infinity and positive infinity.
-The queues are unbounded and may hold an infinite number of integers.
+The queues and accumulator may hold any integer or float between negative infinity and positive infinity.
+The queues are unbounded and may hold an infinite amount of numbers.
 Every queue initializes with a single 0 enqueued.
 The "current queue" is the queue in the queue-list that can be operated on by functions.
 If the current queue is empty, the program will terminate.
 "Keywords" are shortcuts that may refer to spaces in memory or user input.
 CavyCode is case insensitive, so you can type functions or keywords with any capitalization.
-CavyCode ignores all whitespace, and you can enclose code comments in "|" symbols.
+You can enclose code comments in "|" symbols.
 
 == USAGE ==
 
@@ -32,15 +32,19 @@ Type '(exit)' to exit CavyCode.
 
 (BEG-INT) -> 1 line of user input as integer
 
+(BEG-FLOAT) -> 1 line of user input as float
+
 (BEG-CHAR) -> 1 byte of user input as ASCII code
 
 == FUNCTIONS ==
 
-["X" may be a keyword or integer, "Y" may be a string enclosed in double quotes.]
+["X" may be a keyword or number, "Y" may be a string enclosed in double quotes.]
 
 (WHEEK-STRING Y) -> Output Y
 
 (WHEEK-INT X) -> Output X as integer
+
+(WHEEK-FLOAT X) -> Output X as float
 
 (WHEEK-CHAR X) -> Output X as ASCII character
 
@@ -56,13 +60,17 @@ Type '(exit)' to exit CavyCode.
 
 (EAT-TOMATO X) -> Multiply leftmost element of current queue by X
 
+(EAT-CARROT X) -> Raise the leftmost element of current queue to the power of X
+
 (POOP) -> Pop leftmost element of current queue
 
 (RUMBLE-STRUT X) -> Free queue at index X from memory, set current queue to index 0
 
 (CHATTER X) -> Subtract X from leftmost element of current queue
 
-(CHATTER-LOUD X) -> Divide the leftmost element of current queue by X, and truncate decimals
+(CHATTER-LOUD X) -> Divide the leftmost element of current queue by X
+
+(TRIM-NAILS) -> Truncate decimal values of leftmost element of current queue
 
 (FORAGE-FOOD X) -> Enqueue random number between 0 and X to current queue
 
