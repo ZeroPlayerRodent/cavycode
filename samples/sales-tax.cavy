@@ -1,0 +1,14 @@
+| Output welcome message and get user input |
+wheek-string "Welcome to the sales tax calculator!" wheek-char 10
+wheek-string "Enter the price of your product in dollars: $" eat-hay beg-float
+wheek-string "Enter the sales tax percentage: %" eat-pellet beg-float
+
+| Calculate results |
+groom-self chatter-loud 100
+eat-lettuce tunnel poop
+groom-self eat-pellet tunnel
+eat-tomato bowl eat-lettuce tunnel
+poop eat-hay bowl
+
+| Output results |
+wheek-string "The price of your product after tax is: $" wheek-float tunnel
