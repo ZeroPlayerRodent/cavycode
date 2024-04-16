@@ -9,14 +9,14 @@ eat-pellet beg-int
 poop
 
 popcorn-above 0
-  zoomies-to 666
+  zoomies-to 777
 
 mark-territory 100
 
 eat-pellet tunnel
 eat-pellet tunnel
 
-chatter-loud 2
+chatter-loud 2 trim-nails
 eat-tomato 2 
 eat-lettuce tunnel
 poop
@@ -35,7 +35,7 @@ zoomies-to 800
 
 mark-territory 2
 poop
-chatter-loud 2
+chatter-loud 2 trim-nails
 wheek-int tunnel
 popcorn-if 1
   zoomies-to 500
@@ -45,7 +45,7 @@ mark-territory 500
 wheek-char 10
 zoomies-to 100
 
-mark-territory 666
+mark-territory 777
 wheek-string "That's not a positive integer..."
 zoomies-to 999
 
