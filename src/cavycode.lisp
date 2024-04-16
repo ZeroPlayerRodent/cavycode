@@ -36,13 +36,45 @@
   )
 )
 
+(defun parse-float (foo) ; Function that parses floats from strings
+  (let ((str "")(counting 0)(count 0))
+    (loop for c across foo
+      do (when (= counting 1) (setf count (+ count 1)))
+      do (when (not (equal c #\.)) (setf str (concatenate 'string str (list c))))
+      do (when (equal c #\.) (setf counting 1))
+    )
+    (if (= counting 1)
+      (coerce (* (parse-integer str) (expt 10 (- count))) 'double-float)
+      (parse-integer str)
+    )
+  )
+)
+
+(defvar pf-variable ; Variable that stores parse-float function
+  (quote
+    (defun parse-float (foo)
+      (let ((str "")(counting 0)(count 0))
+        (loop for c across foo
+          do (when (= counting 1) (setf count (+ count 1)))
+          do (when (not (equal c #\.)) (setf str (concatenate 'string str (list c))))
+          do (when (equal c #\.) (setf counting 1))
+        )
+        (if (= counting 1)
+          (coerce (* (parse-integer str) (expt 10 (- count))) 'double-float)
+          (parse-integer str)
+        )
+      )
+    )
+  )
+)
 
 (defun is-symbol (foo) ; Function that determines if an element of code is a keyword.
   (cond ((string= "TUNNEL" foo)'(elt (queue) 0))
         ((string= "BOWL" foo)'acc)
         ((string= "BEG-INT" foo)'(parse-integer (read-line t)))
+        ((string= "BEG-FLOAT" foo)'(parse-float (read-line t)))
         ((string= "BEG-CHAR" foo)'(char-code (read-char t)))
-        (t (parse-integer foo))
+        (t (parse-float foo))
   )
 )
 
@@ -52,6 +84,9 @@
       (when (>= i (length foo))(return))
       (cond ((string= "WHEEK-INT" (elt foo i))
             (push `(format t "~d" ,(is-symbol (elt foo (+ i 1)))) (cdr (last l))))
+            
+            ((string= "WHEEK-FLOAT" (elt foo i))
+            (push `(format t "~,f" ,(is-symbol (elt foo (+ i 1)))) (cdr (last l))))
             
             ((string= "WHEEK-CHAR" (elt foo i))
             (push `(format t "~c" (code-char ,(is-symbol (elt foo (+ i 1))))) (cdr (last l))))
@@ -76,6 +111,9 @@
             
             ((string= "EAT-TOMATO" (elt foo i))
             (push `(setf (elt (queue) 0) (* (elt (queue) 0) ,(is-symbol (elt foo (+ i 1))))) (cdr (last l))))
+
+            ((string= "EAT-CARROT" (elt foo i))
+            (push `(setf (elt (queue) 0) (expt (elt (queue) 0) ,(is-symbol (elt foo (+ i 1))))) (cdr (last l))))
             
             ((string= "POOP" (elt foo i))
             (push '(pop (queue)) (cdr (last l))))
@@ -87,7 +125,10 @@
             (push `(setf (elt (queue) 0) (- (elt (queue) 0) ,(is-symbol (elt foo (+ i 1))))) (cdr (last l))))
             
             ((string= "CHATTER-LOUD" (elt foo i))
-            (push `(setf (elt (queue) 0) (truncate (/ (elt (queue) 0) ,(is-symbol (elt foo (+ i 1)))))) (cdr (last l))))
+            (push `(setf (elt (queue) 0) (coerce (/ (elt (queue) 0) ,(is-symbol (elt foo (+ i 1)))) 'double-float)) (cdr (last l))))
+            
+            ((string= "TRIM-NAILS" (elt foo i))
+            (push '(setf (elt (queue) 0) (truncate (elt (queue) 0))) (cdr (last l))))
             
             ((string= "FORAGE-FOOD" (elt foo i))
             (push `(nconc (queue) (list (random ,(is-symbol (elt foo (+ i 1))) (make-random-state t)))) (cdr (last l))))
@@ -157,17 +198,18 @@
                        :direction :output
                        :if-exists :supersede
                        :if-does-not-exist :create)
-    (format str "(DEFVAR ACC 0)")
-    (format str "(DEFVAR QI 0)")
-    (format str "(DEFMACRO QUEUE () '(ELT QL QI))")
-    (format str "(DEFVAR QL (LIST '(0)))")
-    (format str "(DEFVAR CODE (LIST")
+    (format str "~s~C" pf-variable #\Return)
+    (format str "(DEFVAR ACC 0)~C" #\Return)
+    (format str "(DEFVAR QI 0)~C" #\Return)
+    (format str "(DEFMACRO QUEUE () '(ELT QL QI))~C" #\Return)
+    (format str "(DEFVAR QL (LIST '(0)))~C" #\Return)
+    (format str "(DEFVAR CODE (LIST~C" #\Return)
     (let ((i 0))
       (loop
         (when (>= i (length code))(return))
         (format str "(QUOTE ")
         (format str "~s" (elt code i))
-        (format str ")")
+        (format str ")~C" #\Return)
         (setf i (+ i 1))
       )
     )
