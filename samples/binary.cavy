@@ -10,7 +10,7 @@ eat-pellet tunnel
 eat-pellet tunnel
 
 mark-territory 1
-chatter-loud 2
+chatter-loud 2 trim-nails
 eat-tomato 2 
 eat-lettuce tunnel
 poop
@@ -22,7 +22,7 @@ eat-pellet bowl
 burrow-in 0
 
 poop
-chatter-loud 2
+chatter-loud 2 trim-nails
 eat-pellet tunnel
 eat-pellet tunnel
 popcorn-if 0
