@@ -158,7 +158,7 @@
             (push (is-symbol(elt foo (+ i 1))) (cdr (last l))))
             
             ((string= "ZOOMIES-TO" (elt foo i))
-            (push `(loop(when(equal(elt code i),(is-symbol (elt foo (+ i 1))))(return))(setf i (+ i 1))(setf i (mod i (length code)))) (cdr (last l))))
+            (push `(setf i (position ,(is-symbol(elt foo (+ i 1))) code :test #'equal)) (cdr (last l))))
       )
       (setf i (+ i 1))
     )
@@ -226,3 +226,4 @@
   )
   (format t "Successfully compiled to a.lisp")
 )
+ 
