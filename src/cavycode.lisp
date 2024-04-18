@@ -73,7 +73,7 @@
         ((string= "BOWL" foo)'acc)
         ((string= "BEG-INT" foo)'(parse-integer (read-line t)))
         ((string= "BEG-FLOAT" foo)'(parse-float (read-line t)))
-        ((string= "BEG-CHAR" foo)'(char-code (read-char t)))
+        ((string= "BEG-CHAR" foo)'(char-code (read-char t nil (code-char 0))))
         (t (parse-float foo))
   )
 )
