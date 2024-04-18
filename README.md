@@ -44,7 +44,7 @@ Check out [cyclic-tag.cavy](https://github.com/ZeroPlayerRodent/cavycode/blob/ma
 
 ## Get Started!
 
-You can build/run CavyCode directly from source, or you can download a pre-compiled binary from the releases tab.
+You can build/run CavyCode directly from source, or you can download a (possibly outdated) pre-compiled binary from the releases tab.
 
 CavyCode is only confirmed to work with the [CLISP](https://clisp.sourceforge.io/) Common Lisp implementation. Any other implementation may not work or may have issues running CavyCode.
 
