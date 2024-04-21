@@ -1,0 +1,21 @@
+forage-food 100 poop
+eat-hay 1
+eat-lettuce tunnel
+wheek-string "I'm thinking of a number from 1-100."
+wheek-char 10
+wheek-string "Can you guess what it is?"
+wheek-char 10
+mark-territory 1
+  wheek-string "Enter your guess: "
+  eat-pellet beg-int poop
+  popcorn-not bowl
+    zoomies-to 2
+  popcorn-above bowl
+    wheek-string "My number is higher!"
+  popcorn-below bowl
+    wheek-string "My number is lower!"
+  wheek-char 10
+zoomies-to 1
+mark-territory 2
+wheek-int tunnel
+wheek-string " is the correct guess!"
