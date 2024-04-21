@@ -1,0 +1,47 @@
+wheek-string "Binary to decimal converter"
+wheek-char 10
+wheek-string "Enter a binary number: "
+
+mark-territory 1
+groom-self
+eat-pellet beg-char
+groom-self
+popcorn-if 10
+  zoomies-to 1
+poop
+
+new-tunnel
+burrow-in 1
+eat-hay 1
+eat-pellet 0
+burrow-in 0
+
+mark-territory 2
+popcorn-not 49
+  zoomies-to 100
+mark-territory 200
+burrow-in 1
+eat-tomato 2
+burrow-in 0
+poop
+popcorn-if 0
+  zoomies-to 2
+
+burrow-in 1
+poop
+wheek-int tunnel
+wheek-char 10
+wheek-string "There is your decimal number!"
+
+zoomies-to 300
+
+mark-territory 100
+burrow-in 1
+eat-lettuce tunnel
+groom-self
+eat-hay bowl
+groom-self
+burrow-in 0
+zoomies-to 200
+
+mark-territory 300
