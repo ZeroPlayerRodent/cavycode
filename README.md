@@ -42,6 +42,8 @@ CavyCode is [Turing-Complete](https://en.wikipedia.org/wiki/Turing_completeness)
 
 Check out [cyclic-tag.cavy](https://github.com/ZeroPlayerRodent/cavycode/blob/main/samples/cyclic-tag.cavy) for a CavyCode program that interprets any cyclic tag system defined by the user.
 
+See also: [BF-CavyCode](https://github.com/ZeroPlayerRodent/BF-CavyCode/tree/main), a [Brainfuck](https://en.wikipedia.org/wiki/Brainfuck) interpreter written in CavyCode.
+
 ## Get Started!
 
 You can build/run CavyCode directly from source, or you can download a (possibly outdated) pre-compiled binary from the releases tab.
