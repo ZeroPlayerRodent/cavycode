@@ -1,0 +1,167 @@
+|
+
+Rule-110 cellular automata implemented in CavyCode
+
+Written by ZeroPlayerRodent in 2024
+
+How to use:
+
+Type in the starting pattern using 0's and 1's to represent the cell states.
+
+(0 = dead cell)
+(1 = live cell)
+
+After typing in the starting pattern, press enter.
+
+Example input and output:
+
+000000000000000000000000000010
+                           XX
+                          XXX
+                         XX X
+                        XXXXX
+                       XX   X
+                      XXX  XX
+                     XX X XXX
+                    XXXXXXX X
+                   XX     XXX
+                  XXX    XX X
+                 XX X   XXXXX
+                XXXXX  XX   X
+               XX   X XXX  XX
+|
+
+mark-territory 200
+groom-self
+eat-pellet beg-char
+groom-self chatter 48
+popcorn-if -38
+  zoomies-to 200
+poop groom-self poop
+
+eat-pellet 2
+
+mark-territory 400
+new-tunnel
+new-tunnel
+mark-territory 300
+
+eat-tomato 100
+eat-lettuce tunnel
+burrow-in 1
+eat-hay bowl
+burrow-in 0
+chatter-loud 100 trim-nails
+eat-pellet tunnel
+poop
+
+eat-tomato 10
+eat-lettuce tunnel
+burrow-in 1
+eat-hay bowl
+burrow-in 0
+chatter-loud 10 trim-nails
+eat-pellet tunnel
+poop
+
+eat-tomato 1
+eat-lettuce tunnel
+burrow-in 1
+eat-hay bowl
+burrow-in 0
+chatter-loud 1 trim-nails
+eat-pellet tunnel
+poop
+
+groom-self
+eat-pellet tunnel poop
+eat-pellet tunnel poop
+eat-pellet tunnel poop
+groom-self poop
+
+burrow-in 1
+
+popcorn-if 111
+  zoomies-to 111
+burrow-in 2
+eat-pellet 0
+burrow-in 1
+mark-territory 111
+
+popcorn-if 110
+  zoomies-to 110
+burrow-in 2
+eat-pellet 1
+burrow-in 1
+mark-territory 110
+
+popcorn-if 101
+  zoomies-to 101
+burrow-in 2
+eat-pellet 1
+burrow-in 1
+mark-territory 101
+
+popcorn-if 100
+  zoomies-to 100
+burrow-in 2
+eat-pellet 0
+burrow-in 1
+mark-territory 100
+
+popcorn-if 011
+  zoomies-to 011
+burrow-in 2
+eat-pellet 1
+burrow-in 1
+mark-territory 011
+
+popcorn-if 010
+  zoomies-to 010
+burrow-in 2
+eat-pellet 1
+burrow-in 1
+mark-territory 010
+
+popcorn-if 001
+  zoomies-to 001
+burrow-in 2
+eat-pellet 1
+burrow-in 1
+mark-territory 001
+
+popcorn-if 000
+  zoomies-to 000
+burrow-in 2
+eat-pellet 0
+burrow-in 1
+mark-territory 000
+
+burrow-in 1
+chatter tunnel
+
+burrow-in 0
+  popcorn-if 2
+zoomies-to 300
+
+burrow-in 2
+eat-pellet 0
+eat-pellet 2
+
+rumble-strut 0
+rumble-strut 0
+
+mark-territory 500
+
+popcorn-not 0
+  wheek-char 32
+popcorn-not 1
+  wheek-char 88
+
+eat-pellet tunnel poop
+popcorn-if 2
+  zoomies-to 500
+eat-pellet tunnel poop
+wheek-char 10
+
+zoomies-to 400
